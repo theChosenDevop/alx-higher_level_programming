@@ -11,7 +11,7 @@ if __name__ == "__main__":
     argv = argv[1:]
 
     if len(argv) != 3:
-        sys.stderr.write("Usage: ./100-my_calculator.py <a> <operator> <b>\n")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
     a = int(argv[0])
@@ -26,5 +26,5 @@ if __name__ == "__main__":
     elif argv[1] == '/':
         print("{} / {} = {}".format(a, b, div(a, b)))
     else:
-        print("Unknown operator. Available operators: +, -, * and /\n")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
