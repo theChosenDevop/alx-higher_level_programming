@@ -2,7 +2,15 @@
 # 9-max_integer.py
 
 def max_integer(my_list=[]):
-    if my_list == "":
+    """max integer function
+
+    Args:
+        my_list: empty list to receive user input
+
+    Return:
+        max integer
+    """
+    if len(my_list) == 0:
         return None
     else:
         max_int = 0
