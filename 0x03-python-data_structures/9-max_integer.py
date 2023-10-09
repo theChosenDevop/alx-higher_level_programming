@@ -12,11 +12,11 @@ def max_integer(my_list=[]):
     """
     if len(my_list) == 0:
         return None
-    else:
-        max_int = 0
-        for i in range(0, len(my_list)):
-            if max_int > my_list[i]:
-                max_int = max_int
-            else:
-                max_int = my_list[i]
-        return max_int
+    max_int = 0
+
+    for i in range(0, len(my_list)):
+        if max_int > my_list[i]:
+            max_int = max_int
+        else:
+            max_int = my_list[i]
+    return max_int
