@@ -20,11 +20,3 @@ def max_integer(my_list=[]):
         else:
             max_int = my_list[i]
     return max_int
-
-"""
-    for num in my_list:
-        if num > max_int:
-            max_int = num
-
-    return max_int
-"""
