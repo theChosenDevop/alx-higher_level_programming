@@ -14,6 +14,14 @@ def max_integer(my_list=[]):
         return None
     max_int = my_list[0]
 
+    """
+        for i in my_list:
+            if num  > max_int:
+                max_int = num
+
+        return max_int
+    """
+
     for i in range(0, len(my_list)):
         if max_int > my_list[i]:
             max_int = max_int
