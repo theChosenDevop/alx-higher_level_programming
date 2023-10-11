@@ -11,8 +11,9 @@ int is_palindrome(listint_t **head)
 	listint_t *temp;
 	listint_t *rev;
 	listint_t *mid;
-	size_t count = 0, i;
-	
+	size_t count, i;
+
+	count = 0;
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
