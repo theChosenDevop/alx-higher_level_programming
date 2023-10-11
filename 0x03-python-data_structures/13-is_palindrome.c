@@ -38,6 +38,11 @@ int is_palindrome(listint_t **head)
 		reverse_list(&second_half);
 		prev_slow->next = second_half;
 	}
+	else
+	{
+		/* Handle the case of an empty list */
+		return (1);
+	}
 
 	return (1);
 }
