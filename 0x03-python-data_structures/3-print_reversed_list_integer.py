@@ -7,9 +7,9 @@ def print_reversed_list_integer(my_list=[]):
         my_list: empty list
 
     Returns:
-        The reversed integers on a new line
+        None
     """
-    if isinstance(my_list, list):
-        my_list.reverse()
-        for x in my_list:
-            print("{:d}".format(x))
+    if not my_list:
+        return
+    print(my_list[-1])
+    print_reversed_list_integer(my_list[:-1])
