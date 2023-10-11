@@ -8,45 +8,41 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp;
-	listint_t *rev;
-	listint_t *mid;
-	size_t count, i;
+	listint_t *slow = *head;
+	listint_t *fast = *head;
+	listint_t *prev_slow = *head;
+	listint_t *second_half = NULL;
 
-	count = 0;
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
-
-	temp = *head;
-	while (temp)
+	if (*head != NULL || (*head)->next != NULL)
 	{
-		count++;
-		temp = temp->next;
+		while (fast && fast->next)
+		{
+			fast = fast->next->next;
+			prev_slow = slow;
+			slow = slow->next;
+		}
+		if (fast != NULL)
+			slow = slow->next;
+
+		second_half = slow;
+		reverse_list(&second_half);
+
+		slow = *head;
+		while (second_half)
+		{
+			if (second_half->n != slow->n)
+				return (0);
+			second_half = second_half->next;
+			slow = slow->next;
+		}
+		reverse_list(&second_half);
+		prev_slow->next = second_half;
 	}
-
-	temp = *head;
-	for (i = 0; i < ((count / 2) - 1); i++)
-		temp = temp->next;
-
-	if ((count % 2) == 0 && temp->n != temp->next->n)
-		return (0);
-
-	temp = temp->next->next;
-	rev = reverse_list(&temp);
-	mid = rev;
-
-	temp = *head;
-	while (temp && rev)
-	{
-		if (temp->n != rev->n)
-			return (0);
-		temp = temp->next;
-		rev = rev->next;
-	}
-	reverse_list(&mid);
 
 	return (1);
 }
+
+
 /**
  * reverse_list - reverse a singly linked list
  * @head: array
@@ -54,7 +50,8 @@ int is_palindrome(listint_t **head)
  */
 listint_t *reverse_list(listint_t **head)
 {
-	listint_t *prev, *next, *curr = *head;
+	listint_t *prev = NULL;
+	listint_t *next = NULL, *curr = *head;
 
 	while (curr)
 	{
