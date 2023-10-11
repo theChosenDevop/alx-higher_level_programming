@@ -40,7 +40,6 @@ int is_palindrome(listint_t **head)
 	}
 	else
 	{
-		/* Handle the case of an empty list */
 		return (1);
 	}
 
