@@ -9,4 +9,15 @@ def weight_average(my_list=[]):
         Returns:
             weights average of all integers
     """
-    return list(map([lambda x: x + y for x, y in my_list]))
+
+    if not my_list:
+        return 0
+    score = 0
+    weight = 0
+
+    for first, second in my_list:
+        score = (first * second) + score
+        weight = second + weight
+
+    weighted_average = score / weight
+    return weighted_average
