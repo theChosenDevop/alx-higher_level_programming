@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 101-square_matrix_map.py
-
 def square_matrix_map(matrix=[]):
     """ square matrix function
 
