@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-# 11-multiply_list_map.py
 
 def multiply_list_map(my_list=[], number=0):
-    """
+    """ multiply list map function
 
         Args:
-            my_lists: list of integers
+            my_list: list of integers
             number: integer
 
         Returns:
-            list of integer multiplied by number
+                 a list with all values multiplied by a
+                 number without using any loop
     """
-    return list(map(lambda x: x * number, my_list))
+    return list(map((number).__mul__, my_list))

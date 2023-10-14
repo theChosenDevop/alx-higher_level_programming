@@ -1,17 +1,21 @@
-#!/usr.bin/python3
-# 10-best_score.py
+#!/usr/bin/python3
 
 def best_score(a_dictionary):
-    """best score function
+    """ best score function
 
         Args:
-            a_dictionary: input
+            a_dictionary: dictionary
 
         Returns:
-            score or None if not
+            A key with the biggest integer value
     """
+    max_val = 0
+    best_key = None
     if not a_dictionary:
         return None
+    for key, value in a_dictionary.items():
+        if value > max_val:
+            max_val = value
+            best_key = key
 
-    max_val = max(a_dictionary, key=a_dictionary.get)
-    return max_val
+    return (best_key)
