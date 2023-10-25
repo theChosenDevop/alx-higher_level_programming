@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" definition of a class Square """
+
 
 class Square:
     """
-        void square
+        representation of square
     """
     pass
