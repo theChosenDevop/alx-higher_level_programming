@@ -20,9 +20,9 @@ class Rectangle:
 
     def __str__(self):
         """ Returns readable string of # for end users """
+        str_hash = ""
         if self.__height == 0 or self.__width == 0:
-            return 0
-        str_hash = ''
+            return str_hash
         for index in range(self.__height):
             str_hash += "#" * self.__width
             str_hash += '\n'
