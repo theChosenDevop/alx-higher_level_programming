@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-
 """
     0-rectangle Module
     Private intsance of width and height
 """
+
 
 class Rectangle:
     """ Rectangle class with object attributes width and height. """
@@ -26,7 +26,6 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """ set width of instance of class
-        
             Args:
                 value: value of width, must be positive integer
         """
@@ -45,9 +44,8 @@ class Rectangle:
     def height(self, value):
         """
             Sets height of object of a Rectangle class
-
             Args:
-            value: value of height, must be a positive integer
+              value: value of height, must be a positive integer
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
