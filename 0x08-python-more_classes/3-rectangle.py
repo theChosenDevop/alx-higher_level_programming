@@ -27,7 +27,7 @@ class Rectangle:
             for index_2 in range(self.__width):
                 str_hash += "#"
             str_hash += '\n'
-        return str_hash
+        return str_hash[:-1]
 
     @property
     def width(self):
