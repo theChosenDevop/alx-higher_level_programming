@@ -24,7 +24,8 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return str_hash
         for index in range(self.__height):
-            str_hash += "#" * self.__width
+            for index_2 in range(self.__width):
+                str_hash += "#"
             str_hash += '\n'
         return str_hash
 
