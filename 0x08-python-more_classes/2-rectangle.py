@@ -56,8 +56,8 @@ class Rectangle:
     """ public instance method """
     def area(self):
         """ area: product of width and height """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
         """ perimter of rectangle class instance """
-        return (self.width + self.height) * 2
+        return (self.__width + self.__height) * 2
