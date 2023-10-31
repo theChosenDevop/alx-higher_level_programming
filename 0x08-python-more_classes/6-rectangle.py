@@ -17,10 +17,9 @@ class Rectangle:
             width: object method of the class
             height: object method of the class
          """
-        Rectangle.number_of_instances += 1
-        self.id = Rectangle.number_of_instances
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         """ Returns readable string of # for end users """
@@ -43,6 +42,7 @@ class Rectangle:
         """" Print the message Bye rectangle... (... being 3 dots not ellipsis)
         when an instance of Rectangle is deleted """
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
