@@ -8,4 +8,4 @@ def lookup(obj):
         Args:
             obj: instance of a class
     """
-    return list(dir(obj))
+    return dir(obj)
