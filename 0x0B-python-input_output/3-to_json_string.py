@@ -1,7 +1,6 @@
 #!/usr/bin/python3
+""" Defines to_json_string function """
 import json
-""" Defines t0=o_json_string function """
-
 
 def to_json_string(my_obj):
     """
