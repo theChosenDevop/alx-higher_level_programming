@@ -3,13 +3,13 @@
 
 
 def add_attribute(obj, attr_name, attr_value):
-    """"add attribute to instance of a class
-        and throws error if it can't
-
-        Args:
+    """
+    Args:
             obj: obj to add attribute to
             attr_name: attribute name
             attr_value: attribute value
+    Raises:
+            TypeError: if the attribute cannot be added
     """
     if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
