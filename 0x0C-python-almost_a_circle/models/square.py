@@ -45,3 +45,19 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """ Update the class Square by adding the public method """
+        attributes = ["id", "size", "x", "y"]
+
+        if args and len(args) != 0:
+            for element in range(len(args)):
+                setattr(self, attributes[element], args[element])
+        elif kwargs and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ returns the dictionary representation of a square """
+        return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
