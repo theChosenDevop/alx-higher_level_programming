@@ -13,7 +13,7 @@ class Square(Rectangle):
             size(int): The size of the new Square
             x(int): The x coordinate of the new Square
             y(int): The y coordinate of the new Square
-            id(int): THe identity of the new Square
+            id(int): The identity of the new Square
         Raises:
                 TypeError: if size is not an integer
                 ValueError:if size is <= 0
@@ -23,16 +23,21 @@ class Square(Rectangle):
         
     def __str__(self):
             """ returns string representation """
-            return ("[Square] ({}) {}/{} - {}\
-                    ".format(self.id, self.x, self.y, self.width))
+            return ("[Square] ({}) {}/{} - {}".format(
+                self.id,
+                self.x,
+                self.y,
+                self.width
+                )
+                )
     @property
     def size(self):
             """ Get the size of Square """
             return self.width
 
     @size.setter
-    """ assigns value to attributes """
     def size(self, value):
+        """ assigns value to attributes """
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
