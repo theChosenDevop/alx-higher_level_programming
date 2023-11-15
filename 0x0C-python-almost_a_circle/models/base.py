@@ -41,7 +41,7 @@ class Base:
         """
         filename = cls.__name__ + '.json'
         with open(filename, 'w') as jsonfile:
-            if list_objs is None and len(list_objs) == 0:
+            if list_objs is None:
                 jsonfile.write('[]')
             else:
                 list_dicts = [obj.to_dictionary() for obj in list_objs]
@@ -57,8 +57,8 @@ class Base:
                     The list of the JSON string representation
                     json_string
         """
-        if json_string is None or len(json_string) == 0:
-            return "[]"
+        if json_string is None:
+            return []
         return json.loads(json_string)
 
     @classmethod
@@ -85,4 +85,4 @@ class Base:
                 dict_list = Base.from_json_string(jsonfile.read())
             return [cls.create(**item) for item in dict_list]
         except IOError:
-            return "[]"
+            return []
