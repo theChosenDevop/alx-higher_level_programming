@@ -1,9 +1,10 @@
 #!/usr/bin/node
+/* script that prints 3 lines of variables */
 
-let first_var = 'C is fun';
-let sec_var = 'Python is cool';
-let third_var = 'Javascript is amazing';
+const firstVar = 'C is fun';
+const secVar = 'Python is cool';
+const thirdVar = 'Javascript is amazing';
 
-console.log(first_var);
-console.log(sec_var);
-console.log(third_var);
+console.log(firstVar);
+console.log(secVar);
+console.log(thirdVar);
