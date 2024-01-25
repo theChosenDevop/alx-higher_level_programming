@@ -1,0 +1,2 @@
+Time complexity of def find_peak(list_of_integers) is:
+O(n)
