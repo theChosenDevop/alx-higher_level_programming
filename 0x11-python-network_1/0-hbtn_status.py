@@ -5,8 +5,9 @@ import urllib.request
 """This module is used to work with urls for html requests & responses"""
 
 
+url = "https://alx-intranet.hbtn.io/status"
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
+    with urllib.request.urlopen(url) as response:
         html = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(html)))
