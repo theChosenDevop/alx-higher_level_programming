@@ -11,4 +11,4 @@ if __name__ == "__main__":
     url = sys.argv[1]
 
     with urllib.request.urlopen(url) as req:
-        print(response.getheader('X-Request-Id'))
+        print(req.getheader('X-Request-Id'))
