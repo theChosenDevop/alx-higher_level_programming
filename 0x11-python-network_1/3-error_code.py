@@ -5,14 +5,13 @@
 import urllib.error
 import urllib.request
 import sys
-"""Modules manage request and error messages"""
 
 
 if __name__ == "__main__":
     url = sys.argv[1]
     try:
         with urllib.request.urlopen(url) as response:
-            html = response.read().decode('utf-8')
-            print(html)
+            body = response.read().decode('utf-8')
+            print(body)
     except urllib.error.HTTPError as e:
-        print("Error Code: {}".format(e.code))
+        print("Error code: {}".format(e.code))
