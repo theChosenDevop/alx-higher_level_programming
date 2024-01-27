@@ -5,12 +5,15 @@
 
 import sys
 import requests
+from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
     username = sys.argv[1]
     passwd = sys.argv[2]
     url = 'https://api.github.com/user'
-    response = requests.get(url, auth=(username, passwd))
+
+    token = HTTPBasicAuth(username, passwd)
+    response = requests.get(url, auth=token)
     json_data = response.json()
     print(json_data.get('id'))
