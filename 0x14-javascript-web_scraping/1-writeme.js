@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/*1-writeme module*/
+/*Write to file from commandline*/
 
 const fs = require('fs');
 
