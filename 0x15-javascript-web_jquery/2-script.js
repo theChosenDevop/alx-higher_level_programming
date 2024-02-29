@@ -1,3 +1,7 @@
-var text_color = $("header")
-$("DIV#red_header").on("click", function(event){
-	text_color.css("#FF0000")}
+$(document).ready(function () {
+	const redHeadElement = $('#red_header');
+	redHeadElement.click(function () {
+		const headerElement = $('header');
+		headerElement.css('color', '#FF0000');
+	});
+});

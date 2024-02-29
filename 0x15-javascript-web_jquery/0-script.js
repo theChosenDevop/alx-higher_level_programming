@@ -1,2 +1,2 @@
-var text_color =document.querySelector(header)
-text_color.css("#FF0000")
+var text_color = document.querySelector('header');
+text_color.style.color = '#FF0000';
